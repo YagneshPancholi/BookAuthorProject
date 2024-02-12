@@ -1,0 +1,41 @@
+﻿<Application x:Class="Project1WpfMVVM.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:viewModels="clr-namespace:Project1WpfMVVM.ViewModels"
+             xmlns:views="clr-namespace:Project1WpfMVVM.Views">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/Common.xaml" />
+                <ResourceDictionary Source="/Styles/NavigationBar.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
+                <views:HomeView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:BooksViewModel}">
+                <views:BooksView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:AuthorsViewModel}">
+                <views:AuthorsView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:GenresViewModel}">
+                <views:GenresView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:PublishersViewModel}">
+                <views:PublishersView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:AddAuthorViewModel}">
+                <views:AddAuthorView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:EditAuthorViewModel}">
+                <views:EditAuthorView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:EditBookViewModel}">
+                <views:EditBookView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:AddBookViewModel}">
+                <views:AddBookView />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,80 @@
+<div class="CommonForm">
+  <h2>Add New Author</h2>
+  <h3 class="success-message" *ngIf="AddAuthorSuccessMessage != undefined">
+    {{ AddAuthorSuccessMessage }}
+  </h3>
+  <h3 class="error-message" *ngIf="AddAuthorFailMessage != undefined">
+    {{ AddAuthorFailMessage }}
+  </h3>
+  <form
+    #addAuthorForm="ngForm"
+    (ngSubmit)="AddAuthor(addAuthorForm.value, addAuthorForm)"
+    class="common-form"
+  >
+    <input
+      class="form-input"
+      name="authorName"
+      type="text"
+      required
+      placeholder="Enter Author Name"
+      #authorName="ngModel"
+      ngModel
+    />
+    <p class="error-message" *ngIf="authorName.invalid && authorName.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+
+    <input
+      class="form-input"
+      name="birthDate"
+      type="date"
+      value="2017-12-31"
+      required
+      #birthDate="ngModel"
+      ngModel
+    />
+    <p class="error-message" *ngIf="birthDate.invalid && birthDate.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+
+    <input
+      class="form-input"
+      type="email"
+      name="email"
+      required
+      pattern="^([a-z0-9.].*)@([a-z].*)\.[a-z]{2,3}$"
+      placeholder="Enter Author email"
+      #email="ngModel"
+      ngModel
+    />
+    <p class="error-message" *ngIf="email.invalid && email.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+    <input
+      class="form-input"
+      type="text"
+      name="education"
+      required
+      placeholder="Enter Author Education"
+      #education="ngModel"
+      ngModel
+    />
+    <p class="error-message" *ngIf="education.invalid && education.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+    <div class="buttonHolder">
+      <button
+        class="btn btn-success form-button"
+        [disabled]="addAuthorForm.invalid"
+      >
+        Submit
+      </button>
+      <button
+        class="btn btn-warning form-button"
+        (click)="cancelAddAuthorForm()"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

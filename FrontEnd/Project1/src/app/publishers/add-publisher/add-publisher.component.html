@@ -1,0 +1,44 @@
+<div class="CommonForm">
+  <h2>Add New Publisher</h2>
+  <h3 class="success-message" *ngIf="AddPublisherSuccessMessage != undefined">
+    {{ AddPublisherSuccessMessage }}
+  </h3>
+  <h3 class="error-message" *ngIf="AddPublisherFailMessage != undefined">
+    {{ AddPublisherFailMessage }}
+  </h3>
+  <form
+    #addPublisherForm="ngForm"
+    (ngSubmit)="AddPublisher(addPublisherForm.value, addPublisherForm)"
+    class="common-form"
+  >
+    <input
+      class="form-input"
+      name="publisherName"
+      type="text"
+      required
+      placeholder="Enter Publisher Name"
+      #publisherName="ngModel"
+      ngModel
+    />
+    <p
+      class="error-message"
+      *ngIf="publisherName.invalid && publisherName.touched"
+    >
+      {{ FieldRequiredMessage }}
+    </p>
+    <div class="buttonHolder">
+      <button
+        class="btn btn-success form-button"
+        [disabled]="addPublisherForm.invalid"
+      >
+        Submit
+      </button>
+      <button
+        class="btn btn-warning form-button"
+        (click)="cancelAddPublisherForm()"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+  <a class="navbar-brand" routerLink="/">Library</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Author">Authors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Book">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Genre">Genres</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/Publisher">Publishers</a>
+      </li>
+    </ul>
+  </div>
+  <div class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</nav>
+<main class="main-body">
+  <router-outlet></router-outlet>
+</main>
+<footer class="myfooter">
+  <ul>
+    <li>
+      <a class="nav-link" href="https://stackoverflow.com/" target="_blank"
+        >Help
+      </a>
+    </li>
+    <li>
+      <a class="nav-link" href="">&#169; CopyRight, Yagnesh</a>
+    </li>
+  </ul>
+</footer>

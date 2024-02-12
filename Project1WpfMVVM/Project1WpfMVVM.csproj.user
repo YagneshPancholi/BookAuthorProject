@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Controls\BooksCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddAuthorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AddBookView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditAuthorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\EditBookView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="App.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\AuthorsCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\BooksCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Common.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddAuthorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AddBookView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AuthorsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\BooksView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EditAuthorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EditBookView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\GenresView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PublishersView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

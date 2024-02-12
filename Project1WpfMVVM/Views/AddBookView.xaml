@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Project1WpfMVVM.Views.AddBookView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+              xmlns:nav="clr-namespace:Project1WpfMVVM.State.Navigators"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Border BorderBrush="Black"  BorderThickness="1">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical">
+                <TextBox  x:Name="BookName"  PreviewMouseDown ="PreviewMouseDownEventToClearDefaultData"   Text="{Binding Book.bookName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource commonFormTextInput}" />
+                <TextBox x:Name="Price" Text="{Binding Book.price,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource commonFormTextInput}" />
+                <Label Content="_Authors : " Style="{StaticResource commonFormLabel}"  Target="{Binding ElementName=box1}" />
+                <ComboBox x:Name="box1"   Style="{ StaticResource commonFormMultiSelect}" ItemsSource="{Binding AllAuthors2}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+                                <CheckBox x:Name="authorNameCheckBox"  Content="{Binding authorName}"  Checked="SelectAuthor"  CommandParameter="{Binding authorName}" Unchecked="UnselectAuthor" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBox x:Name="selectedAuthorNamesBox" TextWrapping="Wrap" IsEnabled="False"  Style="{StaticResource commonFormTextInput}" Text="{Binding Book.AuthorNamesStr,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                <Label Content="_Genres : " Style="{StaticResource commonFormLabel}"  Target="{Binding ElementName=box2}" />
+                <ComboBox x:Name="box2"   Style="{ StaticResource commonFormMultiSelect}" ItemsSource="{Binding AllGenres2}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="genreNameCheckBox"  Content="{Binding genreName}"  Checked="SelectAuthor"  CommandParameter="{Binding genreName}" Unchecked="UnselectAuthor" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBox x:Name="selectedGenreNamesBox" TextWrapping="Wrap" IsEnabled="False"  Style="{StaticResource commonFormTextInput}" Text="{Binding Book.GenreNamesStr,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                <Label Content="_Publishers : " Target="{Binding ElementName=box3}" Style="{StaticResource commonFormLabel}" />
+                <ComboBox x:Name="box3" Style="{ StaticResource commonFormMultiSelect}" ItemsSource="{Binding AllPublishers2}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <CheckBox x:Name="publisherNameCheckBox"  Content="{Binding publisherName}"  Checked="SelectAuthor"  CommandParameter="{Binding publisherName}" Unchecked="UnselectAuthor" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <TextBox x:Name="selectedPublisherNamesBox" IsEnabled="False"  Style="{StaticResource commonFormTextInput}" Text="{Binding Book.PublisherNamesStr,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Style="{StaticResource buttonsHolder}">
+                <Button  x:Name="SubmitBtn" Content="Submit" Style="{StaticResource commonFormWorkButton}"  Command="{Binding AddBookCommand}"  CommandParameter="{Binding Book}" />
+                <Button x:Name="CancelBtn" Content="Cancel" Style="{StaticResource commonFormCancelButton}" DataContext="{Binding Navigator}" Command="{Binding UpdateCurrentViewModelCommand}" CommandParameter="{x:Static nav:ViewTypes.Books}" />
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl> 

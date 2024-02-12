@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:sdl="http://schemas.sdl.com/xaml"
+                    xmlns:models="clr-namespace:Project1WpfMVVM.Models"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--colors-->
+    <Color x:Key="primaryColor1">#0074D9</Color>
+
+    <!--brushes-->
+    <SolidColorBrush x:Key="primaryBrush1" Color="{StaticResource primaryColor1}" />
+    <Style x:Key="commonFormTextInput" TargetType="TextBox">
+        <Setter Property="BorderBrush" Value="{StaticResource primaryBrush1}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Width" Value="300" />
+        <Setter Property="Height" Value="auto" />
+        <Setter Property="MinHeight" Value="40" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style x:Key="commonFormLabel" TargetType="Label">
+        <Setter Property="BorderBrush" Value="{StaticResource primaryBrush1}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Width" Value="300" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style x:Key="commonFormMultiSelect" TargetType="ComboBox">
+        <Setter Property="Background" Value="Gray" />
+        <Setter Property="BorderBrush" Value="{StaticResource primaryBrush1}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="0 5 0 5" />
+        <Setter Property="Width" Value="300" />
+        <Setter Property="Height" Value="20" />
+    </Style>
+    <Style x:Key="commonFormDateInput" TargetType="DatePicker">
+        <Setter Property="BorderBrush" Value="{StaticResource primaryBrush1}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Width" Value="300" />
+        <Setter Property="Height" Value="40" />
+    </Style>
+    <Style x:Key="commonFormWorkButton" TargetType="Button">
+        <Setter Property="BorderBrush" Value="{StaticResource primaryBrush1}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="25 5 25 0" />
+        <Setter Property="Width" Value="100" />
+        <Setter Property="Height" Value="30" />
+    </Style>
+    <Style x:Key="commonFormCancelButton" TargetType="Button">
+        <Setter Property="BorderBrush" Value="{StaticResource primaryBrush1}" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="25 5 25 0" />
+        <Setter Property="Width" Value="100" />
+        <Setter Property="Height" Value="30" />
+    </Style>
+
+    <Style x:Key="buttonsHolder" TargetType="StackPanel">
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Width" Value="300" />
+        <Setter Property="Height" Value="40" />
+    </Style>
+</ResourceDictionary>

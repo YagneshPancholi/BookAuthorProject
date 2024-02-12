@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@types/jquery": "^3.5.18"
+  },
+  "dependencies": {
+    "popper.js": "^1.16.1"
+  }
+}

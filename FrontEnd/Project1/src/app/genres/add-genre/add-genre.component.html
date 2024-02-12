@@ -1,0 +1,41 @@
+<div class="CommonForm">
+  <h2>Add New Genre</h2>
+  <h3 class="success-message" *ngIf="AddGenreSuccessMessage != undefined">
+    {{ AddGenreSuccessMessage }}
+  </h3>
+  <h3 class="error-message" *ngIf="AddGenreFailMessage != undefined">
+    {{ AddGenreFailMessage }}
+  </h3>
+  <form
+    #addGenreForm="ngForm"
+    (ngSubmit)="AddGenre(addGenreForm.value, addGenreForm)"
+    class="common-form"
+  >
+    <input
+      class="form-input"
+      name="genreName"
+      type="text"
+      required
+      placeholder="Enter Genre Name"
+      #genreName="ngModel"
+      ngModel
+    />
+    <p class="error-message" *ngIf="genreName.invalid && genreName.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+    <div class="buttonHolder">
+      <button
+        class="btn btn-success form-button"
+        [disabled]="addGenreForm.invalid"
+      >
+        Submit
+      </button>
+      <button
+        class="btn btn-warning form-button"
+        (click)="cancelAddGenreForm()"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

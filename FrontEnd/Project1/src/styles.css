@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.common-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}
+.form-input {
+  height: 40px;
+  margin-bottom: 20px;
+  border: 1px solid #00749d;
+  padding-left: 15px;
+}
+.form-button {
+  margin: 10px;
+}
+.error-message {
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.success-message {
+  text-align: center;
+  color: green;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.center {
+  position: relative;
+  left: 45%;
+}
+.center button {
+  margin-bottom: 10px;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 20px 20px;
+}
+.container div {
+  text-align: left;
+  flex-basis: 30%;
+}
+.container button {
+  margin-left: 20px;
+}
+.Myborder {
+  max-width: 500px;
+  border: 1.5px solid #0074d9;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+.buttons {
+  margin: 10px 10px;
+}
+.card-header {
+  padding-left: 10%;
+  color: #0074d9;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.card-details {
+  margin-top: 5px;
+  padding-left: 15%;
+  text-transform: capitalize;
+}
+.card-details li {
+  list-style: none;
+  margin-top: 2px;
+}
+.template-confirmation button {
+  margin-right: 10px;
+}
+.CommonForm h2 {
+  text-align: center;
+  color: #0074d9;
+}
+.buttonHolder {
+  text-align: center;
+}

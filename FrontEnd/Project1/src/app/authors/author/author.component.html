@@ -1,0 +1,49 @@
+<div class="center">
+  <button class="btn btn-primary" (click)="navigateToAddAuthor()">
+    Add Author
+  </button>
+</div>
+<div *ngIf="message != undefined" class="success-message">
+  <h3>{{ message }}</h3>
+</div>
+<div class="container">
+  <div *ngFor="let author of authors" class="Myborder">
+    <a class="card-header">{{ author.authorName }}</a>
+    <ul class="card-details">
+      <li>BirthDate : {{ author.birthDate!.split(" ")[0] }}</li>
+      <li style="text-transform: lowercase">Email : {{ author.email }}</li>
+      <li>Education : {{ author.education }}</li>
+    </ul>
+    <div class="buttons">
+      <button
+        class="btn btn-primary"
+        (click)="navigateToEditPage(author.authorName)"
+      >
+        Edit
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="showAlert(template)"
+      >
+        Delete
+      </button>
+      <ng-template #template>
+        <div class="modal-body text-center template-confirmation">
+          <p>This Author Will Be Deleted permanently.Are You Sure?</p>
+
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="confirm(author.authorName)"
+          >
+            Yes
+          </button>
+          <button type="button" class="btn btn-primary" (click)="decline()">
+            No
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

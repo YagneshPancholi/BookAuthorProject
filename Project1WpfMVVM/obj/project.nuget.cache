@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "/5Ngyu0AAJzHXwZC/p9aVss/XdtgtsV0eUxBX6PcCks0sjXMIJDP7XPlKN9kqV9yecXmLTy3pRuV4qYK4DR8YA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Y940876\\source\\repos\\Learning\\Project\\Project1WpfMVVM\\Project1WpfMVVM.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Y940876\\.nuget\\packages\\extended.wpf.toolkit\\4.5.1\\extended.wpf.toolkit.4.5.1.nupkg.sha512",
+    "C:\\Users\\Y940876\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Y940876\\.nuget\\packages\\sdl.multiselectcombobox\\1.0.73\\sdl.multiselectcombobox.1.0.73.nupkg.sha512"
+  ],
+  "logs": []
+}

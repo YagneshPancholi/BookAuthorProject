@@ -1,0 +1,38 @@
+<div class="center">
+  <button class="btn btn-primary" (click)="navigateToAddPublisher()">
+    Add publisher
+  </button>
+</div>
+<div *ngIf="message != undefined" class="success-message">
+  <h3>{{ message }}</h3>
+</div>
+<div class="container">
+  <div *ngFor="let publisher of publishers" class="Myborder">
+    <a class="card-header">{{ publisher.publisherName }}</a>
+    <div class="buttons">
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="showAlert(template)"
+      >
+        Delete
+      </button>
+      <ng-template #template>
+        <div class="modal-body text-center template-confirmation">
+          <p>This Genre Will Be Deleted permanently.Are You Sure?</p>
+
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="confirm(publisher.publisherName)"
+          >
+            Yes
+          </button>
+          <button type="button" class="btn btn-primary" (click)="decline()">
+            No
+          </button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

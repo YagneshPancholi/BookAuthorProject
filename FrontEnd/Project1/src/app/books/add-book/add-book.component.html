@@ -1,0 +1,116 @@
+<div class="CommonForm">
+  <h2>Add New Book</h2>
+  <h3 class="success-message" *ngIf="AddBookSuccessMessage != undefined">
+    {{ AddBookSuccessMessage }}
+  </h3>
+  <h3 class="error-message" *ngIf="AddBookFailMessage != undefined">
+    {{ AddBookFailMessage }}
+  </h3>
+  <form
+    #addBookForm="ngForm"
+    (ngSubmit)="AddBook(addBookForm.value, addBookForm)"
+    class="common-form"
+  >
+    <input
+      class="form-input"
+      name="bookName"
+      type="text"
+      required
+      placeholder="Enter Book Name"
+      #bookName="ngModel"
+      ngModel
+    />
+    <p class="error-message" *ngIf="bookName.invalid && bookName.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+    <input
+      class="form-input"
+      min="0.00"
+      name="price"
+      type="number"
+      placeholder="Enter Book Price &#8377;200"
+      required
+      #price="ngModel"
+      ngModel
+    />
+    <p class="error-message" *ngIf="price.invalid && price.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+    <!-- <input
+      class="form-input"
+      type="text"
+      name="authorName"
+      required
+      placeholder="Enter Author Name"
+      #authorName="ngModel"
+      ngModel
+    /> -->
+    <kendo-multiselect
+      [data]="authors"
+      [(ngModel)]="selectedAuthors"
+      class="form-input"
+      required
+      placeholder="Select Author Name/Names"
+      #authorNames="ngModel"
+      name="authorNames"
+    />
+    <p class="error-message" *ngIf="authorNames.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+    <!-- <input
+      class="form-input"
+      type="text"
+      name="genreName"
+      required
+      placeholder="Enter Genre Name"
+      #genreName="ngModel"
+      ngModel
+    /> -->
+    <kendo-multiselect
+      [data]="genres"
+      [(ngModel)]="selectedGenres"
+      class="form-input"
+      required
+      placeholder="Select Genre Name/Names"
+      #genreNames="ngModel"
+      name="genreNames"
+    />
+    <p class="error-message" *ngIf="genreNames.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+    <!-- <input
+      class="form-input"
+      type="text"
+      name="publisherName"
+      required
+      placeholder="Enter Publisher Name"
+      required
+      #pubName="ngModel"
+      ngModel
+    /> -->
+
+    <kendo-multiselect
+      [data]="publishers"
+      class="form-input"
+      required
+      placeholder="Select Publisher Name/Names"
+      [(ngModel)]="selectedPublishers"
+      #publisherNames="ngModel"
+      name="publisherNames"
+    />
+    <p class="error-message" *ngIf="publisherNames.touched">
+      {{ FieldRequiredMessage }}
+    </p>
+    <div class="buttonHolder">
+      <button
+        class="btn btn-success form-button"
+        [disabled]="addBookForm.invalid"
+      >
+        Submit
+      </button>
+      <button class="btn btn-warning form-button" (click)="cancelAddBookForm()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
