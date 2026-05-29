@@ -34,7 +34,7 @@ namespace Project1WpfMVVM.Commands
                     MessageBox.Show("All Fields Are Required", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return false;
                 }
-                var tempDateFieldsArr = request.birthDate.Split("/");
+                var tempDateFieldsArr = request.birthDate.Split("-");
                 int month = Convert.ToInt32(tempDateFieldsArr[0]);
                 int day = Convert.ToInt32(tempDateFieldsArr[1]);
                 int year = Convert.ToInt32(tempDateFieldsArr[2].Split(" ")[0]);
