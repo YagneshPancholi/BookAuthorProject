@@ -1,0 +1,91 @@
+# ===========================
+# .NET / C# Build Artifacts
+# ===========================
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# ===========================
+# Visual Studio
+# ===========================
+.vs/
+*.rsuser
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# ===========================
+# ASP.NET Core
+# ===========================
+**/launchSettings.json
+
+# Publish output
+**/publish/
+**/PublishProfiles/
+
+# ===========================
+# WPF / Windows
+# ===========================
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# ===========================
+# Angular / Node
+# ===========================
+node_modules/
+dist/
+tmp/
+out-tsc/
+bazel-out/
+.angular/cache/
+.sass-cache/
+connect.lock
+coverage/
+libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+typings/
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.pnp.*
+
+# ===========================
+# OS / General
+# ===========================
+.DS_Store
+*.log
+*.tmp
+*.temp
